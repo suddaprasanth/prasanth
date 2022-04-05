@@ -1,0 +1,50 @@
+#%RAML 1.0
+title: calculator
+version: v1
+protocols: [http,https]
+mediaType: application/json
+traits:
+  Mule: !include /traits/trait.raml
+/addition:
+  post:
+    is: [Mule] 
+    responses:
+      200:
+        body:
+         example: !include /functions/addition.json              
+/subtraction:
+  delete:
+    is: [Mule]
+    responses:
+          200:
+            body:
+                example: !include /functions/subtraction.json
+/multiply:
+  put:
+    is: [Mule]
+    responses:
+      200:
+        body:
+            example: !include functions/multiply.json
+/division:
+  patch:
+    is: [Mule]
+    responses:
+      200:
+        body:
+            example: !include functions/division.json
+/mixed-calculator:
+  post:
+    is: [Mule]
+    responses:
+      200:
+        body:
+          example: !include functions/mixed.json
+            
+              
+                              
+
+
+                   
+
+                   

@@ -1,0 +1,38 @@
+#%RAML 1.0 Trait
+
+queryParameters:
+      number1:
+        required: true
+        type: integer
+      number2:
+        required: true
+        type: integer
+      number3:
+        required: true
+        type: integer 
+      number4:
+        required: true
+        type: integer   
+
+responses:
+  500:
+        body:
+          application/json:
+            example:
+              {
+                "messege" : " internal server error"
+              }
+  401:
+        body:
+          application/json:
+            example:
+              {
+                "messege" : " internal server error"
+              }
+  400:
+        body:
+          application/json:
+            example:
+              {
+                "messege" : " internal server error"
+              }        
